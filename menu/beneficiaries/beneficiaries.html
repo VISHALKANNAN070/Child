@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="beneficiaries.css">
+</head>
+<body>
+    <h1>Student Management</h1>
+    <p>Total Students: <span id="total-students">0</span></p>
+    <button id="add-student-btn">Add Student</button>
+
+    <div id="student-form">
+        <h3>Add Student</h3>
+        <label>
+            Name: <input type="text" id="name" required>
+        </label><br><br>
+        <label>
+            Age: <input type="number" id="age" required>
+        </label><br><br>
+        <label>
+            Date of Joining: <input type="date" id="dateOfJoining" required>
+        </label><br><br>
+        <label>
+            Father's Name: <input type="text" id="fatherName" required>
+        </label><br><br>
+        <label>
+            Mother's Name: <input type="text" id="motherName" required>
+        </label><br><br>
+        <label>
+            Height: <input type="text" id="height" required>
+        </label><br><br>
+        <label>
+            Weight: <input type="text" id="weight" required>
+        </label><br><br>
+        <label>
+            Address: <input type="text" id="address" required>
+        </label><br><br>
+        <label>
+            Mobile Number: <input type="text" id="mobileNumber" required>
+        </label><br><br>
+        <button id="save-student">Add</button>
+        <button id="cancel-student">Cancel</button>
+    </div>
+
+    <h3>Students List</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Date of Joining</th>
+                <th>Father's Name</th>
+                <th>Mother's Name</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>Address</th>
+                <th>Mobile Number</th>
+            </tr>
+        </thead>
+        <tbody id="student-list">
+        </tbody>
+    </table>
+</body>
+</html>
