@@ -1,9 +1,9 @@
-const register=require('../Models/register_table')
+const schema =require('../Models/schema')
 
-const table_login = async(req,res)=>{
+const login = async(req,res)=>{
     try{
-    const task = await register.collection.findOne({number:req.body.number})
-    if(task.password==req.body.password){
+    const task1 = await schema.collection.findOne({number:req.body.number})
+    if(task1.password==req.body.password){
         res.status(200);            
         res.redirect("https://vishalkannan070.github.io/Child_Nutrition_Tracker/menu/menu.html");
     }
@@ -18,20 +18,20 @@ catch{
 }
 }
 
-const create_table_register = async(req,res)=>{
+const register = async(req,res)=>{
     try{
-        const task1 = await register.collection.findOne({number:req.body.number})
-        if(task1.number==req.body.number){
+        const task2 = await schema.collection.findOne({number:req.body.number})
+        if(task2.number==req.body.number){
             res.status(400);
             res.redirect("https://vishalkannan070.github.io/Child_Nutrition_Tracker/register/register.html");
         }
     }
     catch{
         const{name,number,password} = req.body;
-        const task2 = register.create({name,number,password});
+        const task3 = schema.create({name,number,password});
         res.status(200);
         res.redirect("https://vishalkannan070.github.io/Child_Nutrition_Tracker/");
     }
 }
 
-module.exports= {create_table_register,table_login};
+module.exports= {register,login};
