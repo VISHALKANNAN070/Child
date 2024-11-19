@@ -1,12 +1,10 @@
 const express = require('express');
 const app = express();
-require('dotenv').config();
 const mongoose = require('mongoose');
+require('dotenv').config();
 const login_router = require("./Route/Login_router");
 const register_router = require("./Route/Register_router");
 const bodyParser = require('body-parser');
-
-// app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 mongoose.connect(process.env.MongoDB_URL)
